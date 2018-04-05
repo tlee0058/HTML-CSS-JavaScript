@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disappearing Ninjas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var myContent = "";
+        for(var i = 0; i < 8; i++){
+            myContent += '<img src="images/ajax.png">';
+        }
+        myContent += '<button>Reset</button>'
+        $(document).ready(function(){
+            $('.content').append(myContent)
+            
+            $('img').click(function(){
+                $(this).hide()
+            });
+
+            $('button').click(function(){
+                $('img').show()
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>jQuery - assignment 1</h2>
+        <div class="content">
+
+        </div>
+    </div>
+    <button>Restore</button>
+</body>
+</html>

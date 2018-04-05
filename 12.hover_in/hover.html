@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('img').hover(function(){
+                var temp = $(this).attr('src');
+                $(this).attr('src', $(this).attr('alt-src'));
+                $(this).attr('alt-src', temp);
+                
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="images/twitter.png" alt-src="images/ajax.png" temp="">
+        </div>
+    </div>
+</body>
+</html>
